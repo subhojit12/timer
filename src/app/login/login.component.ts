@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  term:any;
+  arr:[];
   constructor() { }
 
   ngOnInit() {
+    
     // for(var i =1;i<5;i++){
     //   setTimeout(function(){
     //     for(var j=1;j<=100;j++){
@@ -22,8 +24,11 @@ export class LoginComponent implements OnInit {
     }
     function print(i){
       setTimeout(function(){
-        console.log(i)
+        this.term = i;
+        // this.arr.push(i);
+        document.write(" "+i)
       },i*2000);
+      // this.term = null;
 
     }
   }
